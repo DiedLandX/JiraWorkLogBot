@@ -1,12 +1,14 @@
 import { REST, Routes, Client, GatewayIntentBits } from "discord.js";
 import { worklogInteraction } from "./commands/worklogInteraction";
-
+import { config } from "dotenv";
 const client = new Client({
   intents: [GatewayIntentBits.Guilds],
 });
 
-const TOKEN =
-  "MTA0ODM0NTA5MjYzODkwODQ4OQ.GfU_pf.iMFG6uBDUI_67hZGHU9BZSfhawiFxlFCFxR9fk";
+config({ path: "../.env" });
+console.log(process.env.DISCORD_TOKEN);
+
+const TOKEN = process.env.DISCORD_TOKEN;
 
 const commands = [
   {
