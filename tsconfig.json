@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "target",
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules/"]
+}
